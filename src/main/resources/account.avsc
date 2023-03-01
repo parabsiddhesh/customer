@@ -1,0 +1,10 @@
+{
+"namespace": "com.example.customer.avro",
+"type": "record",
+"name": "AccountInfo",
+"fields": [
+{"name": "accountId","type":"long" },
+{"name": "name","type":"string"},
+{"name": "balance","type":"double"}
+]
+}
