@@ -43,7 +43,7 @@ public class CustomerController {
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 
-		return restTemplate.exchange("http://localhost:8081/account/getAllaccounts", HttpMethod.GET, entity, List.class)
+		return restTemplate.exchange("https://account-git-parabsiddhesh-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/account/getAllaccounts", HttpMethod.GET, entity, List.class)
 				.getBody();
 	}
 	
@@ -67,7 +67,7 @@ public class CustomerController {
 		try {
 			Map < String, Long > params = new HashMap();
 	        params.put("id", id);
-	        restTemplate.put("http://localhost:8081/account/{id}", accInfo, params);
+	        restTemplate.put("https://account-git-parabsiddhesh-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/account/{id}", accInfo, params);
 			return "Acoount updated using rest successfully";
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -80,7 +80,7 @@ public class CustomerController {
 		try {
 			Map < String, Long > params = new HashMap();
 	        params.put("id", id);
-	        restTemplate.delete("http://localhost:8081/account/{id}", params);
+	        restTemplate.delete("https://account-git-parabsiddhesh-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/account/{id}", params);
 			return "Acoount deleted using rest successfully";
 		} catch (Exception e) {
 			// TODO: handle exception

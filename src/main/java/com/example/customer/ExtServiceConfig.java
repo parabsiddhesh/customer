@@ -22,7 +22,7 @@ public class ExtServiceConfig {
 	//@LoadBalanced
 	@Bean
 	public WebClient getWebClient() {
-		return WebClient.builder().baseUrl("http://localhost:8081/account")
+		return WebClient.builder().baseUrl("https://account-git-parabsiddhesh-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/account")
 				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
 	}
 	

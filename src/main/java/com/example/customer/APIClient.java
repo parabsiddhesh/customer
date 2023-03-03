@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.customer.dto.Account;
 
-@FeignClient(value = "ACCOUNT-SERVICE", url = "http://localhost:8081")
+@FeignClient(value = "ACCOUNT-SERVICE", url = "https://account-git-parabsiddhesh-dev.apps.sandbox-m3.1530.p1.openshiftapps.com")
 public interface APIClient {
 
 	@GetMapping(value = "/account/{id}")
